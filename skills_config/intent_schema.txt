@@ -1,0 +1,22 @@
+{
+  "intents": [
+    {
+      "intent": "ControlCouchpotato",
+      "slots": [
+        {
+          "name": "Movie",
+          "type": "AMAZON.LITERAL"
+        }
+      ] 
+    },
+    {
+      "intent": "RespondCouchpotato",
+      "slots": [
+        {
+          "name": "ListValue",
+          "type": "AMAZON.literal"
+        }
+      ]  
+    }
+  ]
+}
