@@ -5,7 +5,7 @@ require 'alexa_couchpotato/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "alexa_couchpotato"
-  spec.version       = Sinatra::Couchpotato::VERSION
+  spec.version       = Couchpotato::VERSION
   spec.authors       = ["Kyle Lucas"]
   spec.email         = ["kglucas93@gmail.com"]
   spec.summary       = %q{A sinatra middleware for alexa couhpotato actions.}
