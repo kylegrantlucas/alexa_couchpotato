@@ -54,8 +54,6 @@ module Couchpotato
         @@movies = movie
         response.end_session = false
         response.reprompt_text = "Which movie would you like me to download? #{movie.map {|m| m["titles"].first }.to_sentence(:last_word_connector => ' or ')}"
-      elsif movie == false
-        response.spoken_response = "sorry, I wasn't able to find #{@echo_request.slots["movie"]} because the search came up empty"
       else
         response.spoken_response = "sorry, I wasn't able to find #{@echo_request.slots["movie"]} because the search came up empty"
       end
@@ -71,9 +69,7 @@ module Couchpotato
       response = AlexaObjects::Response.new
       if movie != false && query["success"] = true
         response.spoken_response = "okay, downloading #{movie["titles"].first}"
-      elsif movie == false
-        response.spoken_response = "sorry, I wasn't able to find #{@echo_request.slots["movie"]} because the search came up empty"
-      elsif movie && query["success"] = false
+      else
         response.spoken_response = "sorry, I wasn't able to find #{@echo_request.slots["movie"]} because it wouldn't add to the server"
       end
       response.to_json
