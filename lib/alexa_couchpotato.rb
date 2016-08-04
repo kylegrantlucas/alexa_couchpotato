@@ -1,6 +1,7 @@
 require 'json'
 require 'alexa_objects'
-require 'httparty'
+require 'curb'
+require 'oj'
 require 'numbers_in_words'
 require 'numbers_in_words/duck_punch'
 require 'active_support'
@@ -29,7 +30,7 @@ module Couchpotato
           end
         end
         
-        query = HTTParty.get(URI.escape("#{search_endpoint}?q=#{title}"))
+        query = Oj.load(Curl.get(URI.escape("#{search_endpoint}?q=#{title}").body_str)) rescue nil
         
         if query["movies"] && query["movies"].count == 1
           movie = query["movies"].first
