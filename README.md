@@ -1,4 +1,9 @@
 # Alexa Couchpotato
+[![Gem Version](https://badge.fury.io/rb/alexa_couchpotato.svg)](http://badge.fury.io/rb/alexa_couchpotato)
+[![Code Climate](https://codeclimate.com/github/kylegrantlucas/alexa_couchpotato/badges/gpa.svg)](https://codeclimate.com/github/kylegrantlucas/alexa_couchpotato) 
+
+A SingingAssistant plugin for using Alexa commands with CouchPotato. 🎥
+
 ## Installation
 
 Add this line to your SingingAssistant installation's Gemfile:
